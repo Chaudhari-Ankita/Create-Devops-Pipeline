@@ -1,8 +1,8 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/helpful-symbol-358911/create-devops-pipeline/flask-app:$COMMIT_SHA', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/helpful-symbol-358911/create-devops-pipeline/flask-app:v1', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/helpful-symbol-358911/create-devops-pipeline/flask-app:$COMMIT_SHA']
+    args: ['push', 'us-central1-docker.pkg.dev/helpful-symbol-358911/create-devops-pipeline/flask-app:v1']
 
 images:
-  - 'us-central1-docker.pkg.dev/helpful-symbol-358911/create-devops-pipeline/flask-app:$COMMIT_SHA'
+  - 'us-central1-docker.pkg.dev/helpful-symbol-358911/create-devops-pipeline/flask-app:v1'
